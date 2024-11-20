@@ -1,54 +1,50 @@
-▎Ship Game
+# Игра "Корабли"
 
-Welcome to the Ship Game! This is a simple console-based game implemented in C#. The objective of the game is to guess the coordinates of hidden ships on a grid. Players take turns guessing the coordinates, and the game provides feedback on whether the guess was a hit or a miss.
+Добро пожаловать в игру "Корабли"! Это простая консольная игра, реализованная на C#. Цель игры — угадать координаты скрытых кораблей на сетке. Игроки по очереди пытаются угадать координаты, и игра предоставляет обратную связь о том, попали ли они в цель или нет.
 
-▎Features
+## Особенности
 
-• Random Ship Placement: Ships are randomly placed on a grid of user-defined dimensions.
+- **Случайное размещение кораблей**: Корабли случайным образом размещаются на сетке заданных пользователем размеров.
+- **Ввод от пользователя**: Игроки могут вводить свои предположения о местоположении кораблей.
+- **Обратная связь "попадание" или "промах"**: Игра сообщает, попал ли игрок в корабль или нет.
+- **Условие выигрыша**: Игра продолжается до тех пор, пока все корабли не будут успешно обнаружены.
 
-• User Input: Players can input their guesses for ship locations.
+## Начало работы
 
-• Hit or Miss Feedback: The game indicates whether a player's guess hit a ship or not.
+### Предварительные требования
 
-• Win Condition: The game continues until all ships have been successfully located.
+Чтобы запустить эту игру, вам нужно:
 
-▎Getting Started
+- Установленный [SDK .NET](https://dotnet.microsoft.com/download) на вашем компьютере.
 
-▎Prerequisites
+### Установка
 
-To run this game, you need to have:
-
-• .NET SDK (https://dotnet.microsoft.com/download) installed on your machine.
-
-▎Installation
-
-1. Clone the repository:
-   
-   git clone https://github.com/yourusername/ship-game.git
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/вашеимяпользователя/ship-game.git
    cd ship-game
-   
+   ```
 
-2. Open the project in your preferred IDE (e.g., Visual Studio, Visual Studio Code).
+2. Откройте проект в вашем любимом IDE (например, Visual Studio, Visual Studio Code).
 
-3. Build and run the project:
+3. Соберите и запустите проект:
    
+```bash
    dotnet run
-   
+   ```
 
-▎How to Play
+### Как играть
 
-1. When prompted, enter the number of rows and columns for the game grid.
+1. Когда вас попросят, введите количество строк и столбцов для игровой сетки.
+2. Угадайте координаты кораблей, введя значения X (строка) и Y (столбец).
+3. Игра сообщит вам, попали ли вы в корабль или нет.
+4. Продолжайте угадывать, пока все корабли не будут обнаружены.
 
-2. Guess the coordinates of the ships by entering X (row) and Y (column) values.
+### Пример игрового процесса
 
-3. The game will inform you if your guess was a hit or a miss.
 
-4. Continue guessing until all ships have been located.
-
-▎Example Gameplay
-
-Enter number of lines: 5
-Enter number of columns: 5
+Введите количество строк: 5
+Введите количество столбцов: 5
 X Y- - - - - - - - - - - - - - - - - -
 0|false false false false false 
 1|true true false false false 
@@ -56,30 +52,28 @@ X Y- - - - - - - - - - - - - - - - - -
 3|false false false false false 
 4|false true false false true 
    0 1 2 3 4 
-- - - - - - - - - - - - - - - - - - -
-Enter X coordinate: 1
-Enter Y coordinate: 0
-The ship was shot down! | X1 Y0
+
+• - - - - - - - - - - - - - - - - - -
+Введите координату X: 1
+Введите координату Y: 0
+Корабль был потоплен! | X1 Y0
 
 ...
 
-You shot down all ships.
+Вы потопили все корабли.
 
+## Обзор кода
 
-▎Code Overview
+Основные компоненты кода включают:
 
-The main components of the code include:
+- **Основной метод**: Инициализирует игру, генерирует случайную сетку и обрабатывает ввод пользователя.
+- **Метод ShowMap**: Отображает текущее состояние игрового поля.
+- **Метод AllElementsEqual**: Проверяет, были ли обнаружены все корабли.
 
-• Main Method: Initializes the game, generates a random grid, and handles user input.
+## Участие
 
-• ShowMap Method: Displays the current state of the game board.
-
-• AllElementsEqual Method: Checks if all ships have been located.
-
-▎Contributing
-
-Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
+Ваши предложения и улучшения приветствуются! Если у вас есть идеи по улучшению или новым функциям, не стесняйтесь открывать проблемы или отправлять запросы на внесение изменений.
 
 ---
 
-Enjoy playing the Ship Game! If you have any questions or feedback, please feel free to reach out.
+Наслаждайтесь игрой "Корабли"! Если у вас есть вопросы или отзывы, пожалуйста, не стесняйтесь обращаться.
