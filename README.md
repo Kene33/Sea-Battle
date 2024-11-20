@@ -45,23 +45,22 @@
 ```
 Введите количество строк: 5
 Введите количество столбцов: 5
-X Y- - - - - - - - - - - - - - - - - -
-0|false false false false false 
-1|true true false false false 
-2|false false false true false 
-3|false false false false false 
-4|false true false false true 
-   0 1 2 3 4 
+X Y- - - - - - - - - - - - - - - - 
+0|false false false  false false 
+1|true  true  false  false false 
+2|false false false  true  false 
+3|false false false  false false 
+4|false true  false  false true 
+   0     1     2     3     4 
 
-• - - - - - - - - - - - - - - - - - -
+• - - - - - - - - - - - - - - - - 
 Введите координату X: 1
 Введите координату Y: 0
 Корабль был потоплен! | X1 Y0
-```
 ...
 
 Вы потопили все корабли.
-
+```
 ## Обзор кода
 
 Основные компоненты кода включают:
