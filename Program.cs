@@ -50,7 +50,16 @@ namespace Ship
                 Console.WriteLine();
                 Console.WriteLine("- - - - - - - - - - - - - - - - - - - -");
             }
-            // ShowMap(); // uncomment this if you need something like cheat, you will see the map
+            
+            Console.Write("Show a map with ships? (Yes or No): "); string seeMap = Console.ReadLine();
+            if (seeMap == "Y" || seeMap == "Yes")
+            {
+                ShowMap();
+            }
+            else
+            {
+                Console.WriteLine("You dont see a map.\n");
+            }
 
 
             Console.WriteLine();
