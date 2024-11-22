@@ -52,7 +52,7 @@ namespace Ship
             }
             
             Console.Write("Show a map with ships? (Yes or No): "); string seeMap = Console.ReadLine();
-            if (seeMap == "Y" || seeMap == "Yes")
+            if (seeMap == "Y" || seeMap == "Yes" || seeMap == "yes")
             {
                 ShowMap();
             }
@@ -65,10 +65,10 @@ namespace Ship
             Console.WriteLine();
 
             bool win = AllElementsEqual(array_rand);
-
+            
+            Console.WriteLine("Let's go!");
             while (!win)
             {
-                Console.WriteLine("Let's go!");
 
                 Console.Write("Enter X coordinate: "); int guessX = Convert.ToInt16(Console.ReadLine());
                 Console.Write("Enter Y coordinate: "); int guessY = Convert.ToInt16(Console.ReadLine());
