@@ -21,7 +21,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/вашеимяпользователя/ship-game.git
+   git clone https://github.com/kene33/ship-game.git
    cd ship-game
    ```
 
