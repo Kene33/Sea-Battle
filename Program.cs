@@ -52,7 +52,8 @@ namespace Ship
             }
             
             Console.Write("Show a map with ships? (Yes or No): "); string seeMap = Console.ReadLine();
-            if (seeMap == "Y" || seeMap == "Yes" || seeMap == "yes")
+
+            if (seeMap.ToLower() == "y" || seeMap.ToLower() == "yes")
             {
                 ShowMap();
             }
