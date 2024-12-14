@@ -22,7 +22,7 @@
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/Kene33/Sea-Battle.git
-   cd ship-game
+   cd Sea-Battle
    ```
 
 2. Откройте проект в вашем любимом IDE (например, Visual Studio, Visual Studio Code).
