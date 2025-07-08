@@ -34,8 +34,6 @@ int main(void)
         showMap(rows, cols, array);
     }
 
-    bool win = AllElementsEqual(rows, cols, array);
-
     while (!AllElementsEqual(rows, cols, array)) {
         int guessX, guessY;
 
