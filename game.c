@@ -36,18 +36,20 @@ int main(void)
 
     bool win = AllElementsEqual(rows, cols, array);
 
-    while (!win) {
+    while (!AllElementsEqual(rows, cols, array)) {
         int guessX, guessY;
 
         printf("Enter X coordinate: "); scanf_s("%i", &guessX);
         printf("Enter Y coordinate: "); scanf_s("%i", &guessY);
 
-        bool ship = array[guessX][guessY];
 
         if (guessX < 0 || guessX >= rows || guessY < 0 || guessY >= cols) {
             printf("Some problem! Maybe you write uncorrect coordinate.\n");
             return 0;
         }
+        
+        bool ship = array[guessX][guessY];
+
         else if (ship == true) {
             printf("The ship was shot down! | X%d Y%d\n", guessX, guessY);
             array[guessX][guessY] = false;
