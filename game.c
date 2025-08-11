@@ -8,10 +8,9 @@ bool AllElementsEqual(int rows, int cols, bool array[rows][cols]);
 
 int main(void)
 {
-
     int rows, cols; // rows = X, cols = Y
-    printf("Enter number of lines: "); scanf_s("%i", &rows);
-    printf("Enter number of columns: "); scanf_s("%i", &cols);
+    printf("Enter number of lines: "); scanf("%i", &rows);
+    printf("Enter number of columns: "); scanf("%i", &cols);
 
     bool array[rows][cols];
     // bool array[5][5] = { false }; test AllElementsEqual
@@ -26,7 +25,7 @@ int main(void)
     for (size_t i = 0; answer[i] != '\0'; ++i) {
         unsigned char c = (unsigned char)answer[i];
         if (c >= 'A' && c <= 'Z') {
-            answer[i] = (char)(c + ('a' - 'A'));  // +32 т.к по ASCII разница = 32
+            answer[i] = (char)(c + ('a' - 'A'));  // +32 ascii difference
         }
     }
 
@@ -37,8 +36,8 @@ int main(void)
     while (!AllElementsEqual(rows, cols, array)) {
         int guessX, guessY;
 
-        printf("Enter X coordinate: "); scanf_s("%i", &guessX);
-        printf("Enter Y coordinate: "); scanf_s("%i", &guessY);
+        printf("Enter X coordinate: "); scanf("%i", &guessX);
+        printf("Enter Y coordinate: "); scanf("%i", &guessY);
 
 
         if (guessX < 0 || guessX >= rows || guessY < 0 || guessY >= cols) {
@@ -48,7 +47,7 @@ int main(void)
         
         bool ship = array[guessX][guessY];
 
-        else if (ship == true) {
+        if (ship == true) {
             printf("The ship was shot down! | X%d Y%d\n", guessX, guessY);
             array[guessX][guessY] = false;
         }
@@ -65,7 +64,6 @@ int main(void)
 void showMap(int rows, int cols, bool array[rows][cols])
 {
     printf("You see the map with ship.\n");
-
     printf("X Y- - - - - - - - - - - - - - - - - - -\n");
     for (int i = 0; i <= rows; i++) {
         printf("%i|", i);
